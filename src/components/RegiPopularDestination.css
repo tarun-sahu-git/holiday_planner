@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Poppins",sans-serif;
+}
+
+/* MAIN */
+
+.admin_container{
+padding:30px;
+background:#f5f7fb;
+min-height:100vh;
+}
+
+/* FORM CARD */
+
+.form_card{
+border-radius:16px;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* DATA CARD */
+
+.data_card{
+border-radius:16px;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* SEARCH */
+
+.search_input{
+margin-bottom:25px;
+}
+
+/* SLIDER CONTAINER */
+
+.slider_container{
+position:relative;
+}
+
+/* GRID */
+
+.destination_grid{
+display:grid;
+grid-auto-flow:column;
+grid-auto-columns:calc((100% - 40px) / 3);
+gap:20px;
+overflow-x:auto;
+scroll-behavior:smooth;
+padding:10px 0;
+}
+
+.destination_grid::-webkit-scrollbar{
+display:none;
+}
+
+/* CARD */
+
+.destination_card{
+border-radius:12px;
+overflow:hidden;
+transition:0.3s;
+}
+
+.destination_card img{
+height:175px;
+object-fit:cover;
+}
+
+.destination_card h4{
+margin-top:10px;
+font-size:16px;
+}
+
+.destination_card p{
+font-size:13px;
+color:#666;
+}
+
+/* BUTTON GROUP */
+
+.btn_group{
+display:flex;
+gap:10px;
+margin-top:10px;
+}
+
+/* HOVER */
+
+.destination_card:hover{
+transform:translateY(-5px);
+box-shadow:0 15px 35px rgba(0,0,0,0.15);
+}
+
+/* SCROLL BUTTON */
+
+.scroll_btn{
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+background:#fff;
+border:none;
+width:40px;
+height:40px;
+border-radius:50%;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+cursor:pointer;
+font-size:16px;
+display:flex;
+align-items:center;
+justify-content:center;
+z-index:10;
+}
+
+.scroll_btn.left{
+left:-20px;
+}
+
+.scroll_btn.right{
+right:-20px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.admin_container{
+padding:15px;
+}
+
+.destination_grid{
+grid-auto-columns:80%;
+}
+
+}

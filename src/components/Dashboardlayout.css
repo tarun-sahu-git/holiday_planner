@@ -1,0 +1,11 @@
+.dashboard{
+min-height:100vh;
+background:#f5f7fb;
+}
+
+/* CONTENT */
+
+.dashboard_content{
+padding:30px;
+margin-top:60px;
+}

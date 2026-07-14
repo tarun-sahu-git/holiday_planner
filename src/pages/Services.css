@@ -1,0 +1,260 @@
+/* Prevent horizontal scroll globally */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background: #ffffff;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+/* ===============================
+   OUTER SECTION
+   =============================== */
+.service_main_div {
+  width: 100%;
+  padding: 80px 0;
+  background: #ffffff;
+  color: #333;
+}
+
+/* INNER CONTAINER */
+.service_inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ===============================
+   HEADINGS
+   =============================== */
+.service_heading {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 10px;
+}
+
+.service_heading span {
+  color: #ff8c42;
+}
+
+.service_subheading {
+  text-align: center;
+  font-size: 16px;
+  color: #6b7280;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+/* ===============================
+   GRID
+   =============================== */
+.service_card_container {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+/* ===============================
+   CARD
+   =============================== */
+.service_card {
+  position: relative;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 40px 28px;
+  text-align: center;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  overflow: hidden;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+/* ORANGE / PINK BORDER EFFECT */
+.service_card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  border: 2px solid transparent;
+  background: linear-gradient(90deg, #de247e, #eb8d0a) border-box;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) padding-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+/* HOVER */
+.service_card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 45px rgba(255, 140, 66, 0.25);
+}
+
+.service_card:hover::after {
+  opacity: 1;
+}
+
+/* ===============================
+   ICON
+   =============================== */
+.service_card img {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 20px;
+}
+
+/* ===============================
+   TITLE & TEXT
+   =============================== */
+.service_card h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #111827;
+}
+
+.service_card p {
+  font-size: 15px;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+/* ===============================
+   RESPONSIVE
+   =============================== */
+@media (max-width: 1024px) {
+  .service_card_container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .service_heading {
+    font-size: 30px;
+  }
+
+  .service_card_container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===============================
+   LARGE DESKTOP (1400px+)
+   =============================== */
+@media (min-width: 1400px) {
+  .service_inner {
+    max-width: 1300px;
+  }
+
+  .service_heading {
+    font-size: 40px;
+  }
+
+  .service_card {
+    padding: 44px 32px;
+  }
+}
+
+/* ===============================
+   TABLET LANDSCAPE (1024px)
+   =============================== */
+@media (max-width: 1024px) {
+  .service_card_container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .service_heading {
+    font-size: 32px;
+  }
+
+  .service_card {
+    padding: 36px 24px;
+  }
+}
+
+/* ===============================
+   TABLET PORTRAIT (768px)
+   =============================== */
+@media (max-width: 768px) {
+  .service_main_div {
+    padding: 60px 0;
+  }
+
+  .service_heading {
+    font-size: 30px;
+  }
+
+  .service_subheading {
+    font-size: 15px;
+    padding: 0 10px;
+  }
+
+  .service_card img {
+    width: 56px;
+    height: 56px;
+  }
+
+  .service_card h3 {
+    font-size: 18px;
+  }
+
+  .service_card p {
+    font-size: 14.5px;
+  }
+}
+
+/* ===============================
+   MOBILE (640px)
+   =============================== */
+@media (max-width: 640px) {
+  .service_card_container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .service_heading {
+    font-size: 28px;
+  }
+
+  .service_card {
+    padding: 30px 22px;
+  }
+
+  /* Reduce hover jump on mobile */
+  .service_card:hover {
+    transform: translateY(-4px);
+  }
+}
+
+/* ===============================
+   SMALL MOBILE (420px)
+   =============================== */
+@media (max-width: 420px) {
+  .service_heading {
+    font-size: 24px;
+  }
+
+  .service_subheading {
+    font-size: 14px;
+  }
+
+  .service_card {
+    padding: 26px 18px;
+    border-radius: 14px;
+  }
+
+  .service_card img {
+    width: 52px;
+    height: 52px;
+  }
+}

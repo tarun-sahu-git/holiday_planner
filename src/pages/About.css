@@ -1,0 +1,276 @@
+/* ===== Global Background ===== */
+body {
+  background: #ffffff;
+  color: #333333;
+  font-family: "Poppins", "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+}
+
+/* ===== Main Wrapper ===== */
+.about_main {
+  max-width: 1200px;
+  margin: auto;
+  padding: 30px 20px 80px;
+}
+
+/* ===== Hero Section ===== */
+.about_hero {
+  background:
+    linear-gradient(135deg, rgba(255, 77, 110, 0.584), rgba(255, 120, 24, 0.518));
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 24px;
+  margin-bottom: 80px;
+  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+}
+
+.hero_content {
+  text-align: center;
+  color: #0b0b0b;
+}
+
+.hero_content h1 {
+  font-size: 44px;
+  font-weight: 700;
+}
+
+.hero_content p {
+  font-size: 18px;
+  opacity: 0.95;
+}
+
+/* ===== Story Section ===== */
+.about_story {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  margin-bottom: 90px;
+}
+
+.story_image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 22px;
+  object-fit: cover;
+  box-shadow: 0 25px 55px rgba(0,0,0,0.15);
+  transition: all 0.5s ease;
+}
+
+.story_image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 40px 80px rgba(255,77,109,0.25);
+}
+
+.story_content h2 {
+  font-size: 32px;
+  color: #000;
+  margin-bottom: 16px;
+}
+
+.story_content h2 span {
+  background: linear-gradient(135deg, #ff4d6d, #ff7a18);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.story_content p {
+  font-size: 16px;
+  line-height: 1.9;
+  color: #555;
+}
+
+/* ===== Info Cards ===== */
+.about_info_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 26px;
+  margin-bottom: 100px;
+}
+
+.info_card {
+  background: #ffffff;
+  padding: 34px 24px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.08);
+  transition: all 0.4s ease;
+  border: 1px solid #eee;
+  cursor: pointer;
+}
+
+.info_card:hover {
+  transform: translateY(-14px);
+  background: linear-gradient(135deg, #ff4d6d, #ff7a18);
+  box-shadow: 0 35px 70px rgba(255,77,109,0.4);
+}
+
+.info_card h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #000;
+  transition: color 0.3s ease;
+}
+
+.info_card:hover h3,
+.info_card:hover p {
+  color: #ffffff;
+}
+
+.info_card p {
+  font-size: 16px;
+  font-weight: 600;
+  color: #555;
+}
+
+/* ===== Icons in Info Cards ===== */
+.info_icon {
+  font-size: 34px;
+  margin-bottom: 14px;
+  color: #ff4d6d;
+  transition: all 0.35s ease;
+}
+
+.info_card:hover .info_icon {
+  color: #ffffff;
+  transform: scale(1.15) rotate(-5deg);
+}
+
+/* ===== Services Section ===== */
+.about_services {
+  margin-bottom: 90px;
+}
+
+.about_services h2 {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #000;
+}
+
+.services_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+}
+
+.service_item {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 16px;
+  text-align: center;
+  font-size: 15px;
+  color: #555;
+  font-weight: 500;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+  transition: all 0.35s ease;
+  border: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.service_item:hover {
+  transform: translateY(-10px) scale(1.04);
+  background: linear-gradient(135deg, #ff4d6d, #ff7a18);
+  color: #fff;
+  box-shadow: 0 30px 60px rgba(255,77,109,0.45);
+}
+
+.service_icon {
+  font-size: 24px;
+  color: #ff4d6d;
+  transition: all 0.3s ease;
+}
+
+.service_item:hover .service_icon {
+  color: #fff;
+  transform: scale(1.15);
+}
+
+/* ===== Why Choose Us ===== */
+.about_why {
+  background: linear-gradient(135deg, #ff4d6e9d, #ff7818c8);
+  padding: 50px 35px;
+  border-radius: 28px;
+  text-align: center;
+  color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, 
+              rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, 
+              rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+
+.about_why h2 {
+  font-weight: 700;
+  font-size: 32px;
+  margin-bottom: 14px;
+}
+
+.about_why p {
+  font-size: 16px;
+  line-height: 1.9;
+  opacity: 0.95;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1200px) {
+  .about_main {
+    padding: 25px 15px 60px;
+  }
+  .about_story { gap: 30px; }
+  .story_content h2 { font-size: 28px; }
+  .story_content p { font-size: 15px; }
+  .about_info_grid { gap: 20px; }
+  .info_card { padding: 28px 20px; }
+  .about_services h2 { font-size: 28px; }
+  .services_grid { gap: 20px; }
+}
+
+@media (max-width: 900px) {
+  .about_story { flex-direction: column; gap: 40px; }
+  .story_image img { max-width: 100%; }
+  .hero_content h1 { font-size: 34px; }
+  .hero_content p { font-size: 16px; }
+  .about_info_grid { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 18px; }
+  .info_card { padding: 24px 16px; }
+  .about_services { margin-bottom: 70px; }
+  .services_grid { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
+  .service_item { padding: 18px 15px; font-size: 15px; }
+}
+
+@media (max-width: 600px) {
+  .about_main { padding: 20px 12px 50px; }
+  .about_hero { height: 150px; margin-top: 70px; margin-bottom: 60px; }
+  .hero_content h1 { font-size: 28px; }
+  .hero_content p { font-size: 14px; }
+  .story_content h2 { font-size: 24px; }
+  .story_content p { font-size: 14px; line-height: 1.7; }
+  .about_info_grid { grid-template-columns: 1fr; gap: 15px; }
+  .info_card { padding: 20px 15px; }
+  .info_icon { font-size: 28px; margin-bottom: 12px; }
+  .about_services h2 { font-size: 26px; }
+  .services_grid { grid-template-columns: 1fr; gap: 15px; }
+  .service_item { font-size: 14px; padding: 16px 12px; }
+  .about_why { padding: 35px 20px; border-radius: 20px; }
+  .about_why h2 { font-size: 26px; }
+  .about_why p { font-size: 14px; }
+}
+
+@media (max-width: 400px) {
+  .hero_content h1 { font-size: 22px; }
+  .hero_content p { font-size: 13px; }
+  .story_content h2 { font-size: 20px; }
+  .story_content p { font-size: 13px; }
+  .info_card h3 { font-size: 16px; }
+  .info_card p { font-size: 14px; }
+  .service_item { font-size: 13px; padding: 14px 10px; }
+  .about_why h2 { font-size: 22px; }
+  .about_why p { font-size: 13px; }
+}

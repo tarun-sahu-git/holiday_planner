@@ -1,0 +1,191 @@
+.admin-dashboard{
+display:flex;
+gap:25px;
+padding:30px;
+background:#f4f6fb;
+min-height:100vh;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+
+/* LEFT PANEL */
+
+.request-panel{
+width:35%;
+background:white;
+padding:20px;
+border-radius:10px;
+overflow-y:auto;
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
+}
+
+.request-panel h2{
+margin-bottom:15px;
+}
+
+
+/* REQUEST CARD */
+
+.request-card{
+border:1px solid #e6e6e6;
+padding:15px;
+margin-bottom:15px;
+border-radius:8px;
+font-size:14px;
+background:#fafafa;
+transition:0.2s;
+}
+
+.request-card:hover{
+box-shadow:0 3px 10px rgba(0,0,0,0.08);
+}
+
+
+/* TEXT STYLE */
+
+.request-card strong{
+display:block;
+margin-top:6px;
+color:#333;
+}
+
+.request-card p{
+margin:3px 0 6px;
+color:#555;
+}
+
+
+/* BUTTON */
+
+.request-card button{
+margin-top:10px;
+padding:8px 14px;
+background:#4a6cf7;
+color:white;
+border:none;
+border-radius:5px;
+cursor:pointer;
+font-size:13px;
+}
+
+.request-card button:hover{
+background:#3557e0;
+}
+
+
+
+/* RIGHT PANEL */
+
+.admin-form{
+width:65%;
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
+}
+
+.admin-form h2{
+margin-bottom:20px;
+}
+
+
+/* FORM ROW */
+
+.form-row{
+display:flex;
+align-items:center;
+margin-bottom:15px;
+}
+
+
+/* LABEL */
+
+.form-row label{
+width:200px;
+font-weight:600;
+color:#333;
+font-size:14px;
+}
+
+
+/* INPUT */
+
+.form-row input{
+flex:1;
+padding:10px;
+border:1px solid #ccc;
+border-radius:6px;
+font-size:14px;
+}
+
+
+/* TEXTAREA */
+
+.textarea-row{
+align-items:flex-start;
+}
+
+.textarea-row textarea{
+flex:1;
+height:120px;
+padding:10px;
+border:1px solid #ccc;
+border-radius:6px;
+font-size:14px;
+resize:none;
+}
+
+
+/* BUTTON */
+
+.send-btn{
+margin-top:20px;
+padding:12px;
+background:#28a745;
+color:white;
+border:none;
+border-radius:6px;
+cursor:pointer;
+width:100%;
+font-size:15px;
+font-weight:600;
+}
+
+.send-btn:hover{
+background:#1f8a39;
+}
+
+
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+.admin-dashboard{
+flex-direction:column;
+}
+
+.request-panel,
+.admin-form{
+width:100%;
+}
+
+.form-row{
+flex-direction:column;
+align-items:flex-start;
+}
+
+.form-row label{
+width:100%;
+margin-bottom:5px;
+}
+
+.form-row input{
+width:100%;
+}
+
+.textarea-row textarea{
+width:100%;
+}
+
+}
